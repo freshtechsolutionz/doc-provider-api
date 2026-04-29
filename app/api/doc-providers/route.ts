@@ -115,7 +115,7 @@ export async function GET(req: NextRequest) {
   const specialty = searchParams.get("specialty") || "all";
 
   if (!lat || !lng) {
-    return NextResponse.json({ error: "Missing lat or lng" }, { status: 400 });
+    return NextResponse.json({ error: "Missing lat or lng." }, { status: 400 });
   }
 
   const { data: verifiedProviders } = await supabase
